@@ -9,7 +9,6 @@
 #In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
 #first import the csv file into the environment
-import os
 import csv
 import pandas as pd
 
@@ -23,4 +22,5 @@ with open('budget_data.csv', newline = "") as csvfile:
 #find max for profits, store as var to print later
 #find min for profits, store as var to print later
 #print every single variable with the format asked
-#write file as a .txt
+#write file as a text
+# to set directory: cd Documents/Github/PythonHomework/PyBank

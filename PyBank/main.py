@@ -11,16 +11,43 @@
 #first import the csv file into the environment
 import csv
 import pandas as pd
+import math
+import datetime
+
 
 with open('budget_data.csv', newline = "") as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ",")
     for row in csvreader:
 
+        Date = row[0]
+        print(Date)
+
+        Profit = row[1]
+        print(Profit)
+
 #then, find a way to sum the time elapsed in months for the date column and store it as a variable to print later
-#make a sum function for all of the data in the profit column and store in var to print later
-#avg function just like above, again stored as a variable
+        #datetime stuff
+#for loop that adds up each value in the profit column w a counter
+        rowcoutner = 0
+        print(sum_profit)
+#build an average function
+#avg function just like above, again stored as a 
+        #avg_profit = sum_profit/len(Profit)
+        #print(avg_profit)
 #find max for profits, store as var to print later
+        #max_profit = max(Profit)
+        #print(max_profit)
 #find min for profits, store as var to print later
-#print every single variable with the format asked
+        #min_profit = min(Profit)
+        #print(min_profit)
+#print every single variable with the format asked (below)
+  #Financial Analysis
+  #print('----------------------------')
+  # print('Total Months: ' + months)
+  # print('Total: ' + sum_profit)
+  # print('Average  Change: ' + avg_profit)
+  # print('Greatest Increase in Profits: ' + max_profit)
+  # print('Greatest Decrease in Profits: ' + min_profit)
+
 #write file as a text
 # to set directory: cd Documents/Github/PythonHomework/PyBank

@@ -20,16 +20,14 @@ with open('budget_data.csv', newline = "") as csvfile:
     for row in csvreader:
 
         Date = row[0]
-        print(Date)
 
         Profit = row[1]
-        print(Profit)
 
 #then, find a way to sum the time elapsed in months for the date column and store it as a variable to print later
         #datetime stuff
 #for loop that adds up each value in the profit column w a counter
-        rowcoutner = 0
-        print(sum_profit)
+        #rowcoutner = 0
+        #print(sum_profit)
 #build an average function
 #avg function just like above, again stored as a 
         #avg_profit = sum_profit/len(Profit)

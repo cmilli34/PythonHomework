@@ -54,8 +54,10 @@ with open('election_data.csv', 'r') as csvfile:
         winner = "Correy"
     elif max(candidate_votes) == li_volume:
         winner = "Li"
-    else:
+    elif max(candidate_votes) == otooley_volume:
         winner = "O'Tooley"
+    else:
+        winner = "Tie"
 
 
     #print results
@@ -71,5 +73,18 @@ with open('election_data.csv', 'r') as csvfile:
     print('-------------------------')
     print('Winner: ' + winner)
 
-    #copy path
+    #to set directory: cd Documents/Github/PythonHomework/PyPoll python main.py
+
     #export as text file
+
+    path = "/Users/carolinemiller/Documents/Github/PythonHomework/PyPoll/pollresults.txt"
+
+    with open(path, "w", newline = '') as txtfile:
+        txtfile.write("Election Results\n")
+        txtfile.write('-------------------------\n')
+        txtfile.write('Khan: ' + str(khan_percentage) +  '%' + ' (' + str(khan_volume) + ')\n')
+        txtfile.write('Correy: ' + str(correy_percentage) +  '%' + ' (' + str(correy_volume) + ')\n')
+        txtfile.write('Li: ' + str(li_percentage) + '%' + ' (' + str(li_volume) + ')\n')
+        txtfile.write("O'Tooley: " + str(otooley_percentage) + '%' + ' (' + str(otooley_volume) + ')\n')
+        txtfile.write('-------------------------\n')
+        txtfile.write('Winner: ' + winner)

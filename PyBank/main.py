@@ -53,3 +53,13 @@ print('Greatest Decrease in Profits: ' + min_date + ' $' + str(min_profit))
 #put path
 #write file as a text
 #to set directory: cd Documents/Github/PythonHomework/PyBank python main.py
+
+path = '/Users/carolinemiller/Documents/Github/PythonHomework/PyBank/bankresults.txt'
+
+with open(path, "w", newline = '') as txtfile:
+    txtfile.write("Financial Analysis\n")
+    txtfile.write('----------------------------\n')
+    txtfile.write('Total Months: ' + str(total_months) + '\n')
+    txtfile.write('Average  Change: $' + str(avg_profit_change) + '\n')
+    txtfile.write('Greatest Increase in Profits: ' + max_date + ' $' +str(max_profit) + '\n')
+    txtfile.write('Greatest Decrease in Profits: ' + min_date + ' $' + str(min_profit) + '\n')
